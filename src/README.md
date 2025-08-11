@@ -23,8 +23,8 @@ A Spring Boot application that demonstrates **CRUD operations** for managing emp
 
 ## Buid and run
 
-mvn clean install
-mvn spring-boot:run
+- **mvn clean install, 
+-- **mvn spring-boot:run
 
 # Aceess the application
 API Base URL: http://localhost:8086 (port as per choice default 8080)
