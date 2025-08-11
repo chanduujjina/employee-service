@@ -1,14 +1,17 @@
 package com.example.demo.repository;
 
+import java.util.List;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import com.example.demo.entity.Employee;
 
+@Repository
 public interface EmployeeRepository extends JpaRepository<Employee, Long> {
 
-	// Custom query methods can be defined here if needed
-	// For example:
-	// List<Employee> findByRole(String role);
+	
+//	@Query(Selct )
+//	 List<Employee> findByRole(String role);
 
 }
