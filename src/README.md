@@ -13,10 +13,10 @@ A Spring Boot application that demonstrates **CRUD operations** for managing emp
 ---
 
 ## 🛠️ Tech Stack
-- **Java 1+** (Compatible with Java 23 if configured)
+- **Java 17+** (Compatible with Java 23 if configured)
 - **Spring Boot** (REST, Data JPA)
 - **MapStruct** (Object Mapper)
-- **H2 Database**
+- **H2 Database** (in-line database)
 - **Maven**
 
 ---
