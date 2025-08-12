@@ -66,20 +66,6 @@ while keeping the code clean using **MapStruct** for object mapping and **Spring
 
 ---
 
-### ** Buid and run
-
-- **mvn clean install,
-  
-- **mvn spring-boot:run
-
-# Aceess the application
-API Base URL: http://localhost:8086 (port as per choice default 8080)
-
-H2 Console: http://localhost:8086/h2-console
-JDBC URL: jdbc:h2:mem:testdb
-Username: sa
-Password: (leave blank)
-
 # Spring Boot Advanced Features
 
 This document explains **Actuator**, **Global Exception Handling**, and **Profiling** in Spring Boot with examples.
@@ -106,4 +92,16 @@ Add dependency in `pom.xml`:
     <artifactId>spring-boot-starter-actuator</artifactId>
 </dependency>
 
+### ** Buid and run
 
+- **mvn clean install,
+  
+- **mvn spring-boot:run
+
+# Aceess the application
+API Base URL: http://localhost:8086 (port as per choice default 8080)
+
+H2 Console: http://localhost:8086/h2-console
+JDBC URL: jdbc:h2:mem:testdb
+Username: sa
+Password: (leave blank)
