@@ -145,3 +145,7 @@ H2 Console: http://localhost:8086/h2-console
 JDBC URL: jdbc:h2:mem:testdb
 Username: sa
 Password: (leave blank)
+
+actuator end points:- htts://localhost:8086/actuator
+htts://localhost:8086/actuator/health
+
