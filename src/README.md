@@ -21,6 +21,58 @@ A Spring Boot application that demonstrates **CRUD operations** for managing emp
 
 ---
 
+---
+
+## **2️⃣ Project Explanation**
+
+I’ll break it down so you can easily explain it to anyone (including in interviews):
+
+---
+
+### **📌 Project Goal**
+The **Employee Service** project manages employees in a system.  
+It provides REST APIs to **create, read, update, and delete** employee records,  
+while keeping the code clean using **MapStruct** for object mapping and **Spring Boot** for REST APIs.
+
+---
+
+### **🔍 How It Works**
+1. **Controller Layer (`controller`)**
+   - Handles incoming API requests from clients.
+   - Example: `POST /employees` will accept employee details and pass them to the service layer.
+
+2. **Service Layer (`service`)**
+   - Contains business logic.
+   - Example: Save employee details, validate data, call repository methods.
+
+3. **Repository Layer (Spring Data JPA)**
+   - Uses JPA to interact with the **H2 in-memory database**.
+   - No manual SQL needed — Spring Data generates queries.
+
+4. **Entity (`entity`)**
+   - Represents database table structure in Java.
+   - Example: `Employee` class has fields like `id`, `name`, `department`, `salary`.
+
+5. **DTO (`dto`)**
+   - Data Transfer Object — used to transfer data between layers without exposing entity directly.
+   - Example: `EmployeeDTO` matches the API request/response structure.
+
+6. **Mapper (`mapper`)**
+   - MapStruct interface to convert between `Employee` (entity) and `EmployeeDTO` (data object).
+   - MapStruct generates the mapping code automatically at build time.
+
+7. **Exception Handling (`exception`)**
+   - Catches errors like "Employee Not Found" and sends proper JSON error messages to clients.
+
+---
+
+### **💡 Why MapStruct?**
+Normally, mapping between Entity and DTO is done manually:
+```java
+dto.setName(entity.getName());
+
+
+
 ## Buid and run
 
 - **mvn clean install,
