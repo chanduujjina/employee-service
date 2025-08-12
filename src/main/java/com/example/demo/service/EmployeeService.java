@@ -48,9 +48,10 @@ public class EmployeeService {
 		}
 		return null;
 	}
-	public void deleteEmployee(Long id) {
+	public EmployeeDto deleteEmployee(Long id) {
 		Employee employe = employeeRepository.findById(id).orElseThrow(() -> new RuntimeException("Employee not found"));
 		employeeRepository.delete(employe);
+		return null;
 	}
 
 }
