@@ -71,7 +71,7 @@ Normally, mapping between Entity and DTO is done manually:
 ```java
 dto.setName(entity.getName());
 
-
+---
 
 ## Buid and run
 
