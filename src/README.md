@@ -66,15 +66,6 @@ while keeping the code clean using **MapStruct** for object mapping and **Spring
 
 ---
 
-### **💡 Why MapStruct?**
-Normally, mapping between Entity and DTO is done manually:
-```java
-dto.setName(entity.getName());
-
----
-
-
-
 ### ** Buid and run
 
 - **mvn clean install,
