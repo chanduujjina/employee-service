@@ -1,7 +1,15 @@
 package com.example.demo.controller;
 
+
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+=======
+import java.util.List;
+
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
+>>>>>>> 395129f59b3faee222d01b9366f20c091639a6e5
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -32,9 +40,25 @@ public class EmployeeController {
 		return employeeService.updateEmployee(id, emp);
 	}
 	
+
 	@GetMapping("/get/{id}")
 	public EmployeeDto getdata(@PathVariable Long id) {
 		return employeeService.getEmployee(id);
+
+	@GetMapping("/allEmplyees")
+	public List<EmployeeDto> getAllEmployeeDetails(){
+		return employeeService.getAllEmployees();
+	}
+	
+	@PatchMapping("/{id}")
+	public EmployeeDto patialUpdate(@PathVariable Long id, @RequestBody EmployeeDto emp) {
+		return employeeService.updatePartial(id, emp);
+	}
+	
+	@DeleteMapping("/{id}")
+	public EmployeeDto delete(@PathVariable Long id) {
+		return employeeService.deleteEmp(id);
+
 	}
 	
 	@DeleteMapping("/delete/{id}")

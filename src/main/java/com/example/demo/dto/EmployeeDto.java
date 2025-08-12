@@ -1,6 +1,12 @@
 package com.example.demo.dto;
 
 import lombok.Data;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
 import lombok.NoArgsConstructor;
 
 @Data
@@ -8,8 +14,10 @@ import lombok.NoArgsConstructor;
 public class EmployeeDto {
 	
 	private Long id;
+	@Valid
 	private String name;
 	private String role;
+	@NotNull
 	private String salary;
 	
 	

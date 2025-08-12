@@ -10,7 +10,6 @@ import com.example.demo.entity.Employee;
 public interface EmplyeeMapper {
 
 	EmplyeeMapper INSTANCE = Mappers.getMapper(EmplyeeMapper.class);
-	
 	EmployeeDto toDto(Employee employee);
 	Employee toEntity(EmployeeDto employeeDto);
 
