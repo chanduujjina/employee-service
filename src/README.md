@@ -124,13 +124,13 @@ You can create different property files for each environment:
 
 **application-dev.yml**
 ```yaml
-server:
-  port: 8081
 spring:
-  datasource:
-    url: jdbc:h2:mem:devdb
-    username: sa
-    password:
+  profiles:
+    active: dev
+
+```
+```command
+mvn spring-boot:run -Dspring-boot.run.profiles=dev
 ```
 ### ** Buid and run
 
