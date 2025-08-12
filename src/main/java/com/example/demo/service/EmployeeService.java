@@ -37,5 +37,22 @@ public class EmployeeService {
 		employeeRepository.save(employee); //SELECT * FROM  EMPLOYEE WHERE ID = 1, IF YES ->  UPDATE EMPLOYEE SET NAME = "RAMU" WHERE ID = 1;
 		return emplyeeMapper.toDto(employee);
 	}
+	public EmployeeDto getEmployee(Long id) {
+		Optional<Employee> optional = employeeRepository.findById(id);
+		if (optional.isPresent()) {
+			Employee employee = optional.get();
+			EmployeeDto employeeDto = emplyeeMapper.toDto(employee);
+			return employeeDto;
+		}
+		return null;
+	}
+	
 
+
+	public EmployeeDto deleteEmployee(Long id) {
+		Employee employee =employeeRepository.findById(id).orElseThrow(() -> new RuntimeException("Employee not found"));
+		
+		employeeRepository.delete(employee);
+		return null;
+	}
 }
