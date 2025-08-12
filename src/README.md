@@ -89,4 +89,30 @@ JDBC URL: jdbc:h2:mem:testdb
 Username: sa
 Password: (leave blank)
 
+# Spring Boot Advanced Features
+
+This document explains **Actuator**, **Global Exception Handling**, and **Profiling** in Spring Boot with examples.
+
+---
+
+## 📊 1. Spring Boot Actuator
+
+Spring Boot **Actuator** provides production-ready features to monitor and manage your application.
+
+### ✨ Features
+- Health check
+- Metrics
+- Environment info
+- Application info
+- Loggers management
+- Thread dump
+
+### 🛠️ How to Enable
+Add dependency in `pom.xml`:
+```xml
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-actuator</artifactId>
+</dependency>
+
 
