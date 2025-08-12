@@ -103,6 +103,35 @@ management:
       show-details: always
 
 ```
+
+# Spring Boot Profiling
+
+Spring Boot **Profiles** allow you to run the same application in different environments (e.g., `dev`, `test`, `prod`) with different configurations.
+
+---
+
+## 📌 Why Use Profiles?
+- Separate database configurations for each environment
+- Enable or disable beans for specific environments
+- Avoid changing code when deploying to different stages
+
+---
+
+## 🛠 Creating Profiles
+
+### 1️⃣ Create Profile-Specific Config Files
+You can create different property files for each environment:
+
+**application-dev.yml**
+```yaml
+server:
+  port: 8081
+spring:
+  datasource:
+    url: jdbc:h2:mem:devdb
+    username: sa
+    password:
+```
 ### ** Buid and run
 
 - **mvn clean install,
