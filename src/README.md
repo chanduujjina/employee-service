@@ -149,5 +149,6 @@ Password: (leave blank)
 
 actuator end points:- 
 http://localhost:8086/actuator
+
 http://localhost:8086/actuator/health
 
