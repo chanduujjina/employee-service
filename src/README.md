@@ -91,7 +91,18 @@ Add dependency in `pom.xml`:
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-actuator</artifactId>
 </dependency>
+```
+```
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
 
+```
 ### ** Buid and run
 
 - **mvn clean install,
