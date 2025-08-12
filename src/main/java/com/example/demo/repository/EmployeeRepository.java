@@ -10,8 +10,5 @@ import com.example.demo.entity.Employee;
 @Repository
 public interface EmployeeRepository extends JpaRepository<Employee, Long> {
 
-	
-//	@Query(Selct )
-//	 List<Employee> findByRole(String role);
 
 }

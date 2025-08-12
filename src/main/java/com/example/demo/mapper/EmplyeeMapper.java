@@ -11,6 +11,7 @@ import com.example.demo.entity.Employee;
 public interface EmplyeeMapper {
 
 	EmplyeeMapper INSTANCE = Mappers.getMapper(EmplyeeMapper.class);
+
 	@Mapping(source="name", target ="emp_name")
 	EmployeeDto toDto(Employee employee);
 	@Mapping(source="emp_name", target ="name")
