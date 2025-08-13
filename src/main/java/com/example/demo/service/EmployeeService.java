@@ -93,4 +93,16 @@ public class EmployeeService {
 
 	}
 
+<<<<<<< HEAD
+=======
+	public EmployeeDto getEmployeeById(Long id) {
+		Optional<Employee> employee = employeeRepository.findById(id);
+		if (employee.isPresent()) {
+			return emplyeeMapper.toDto(employee.get());
+		}
+		throw new EmployeeNotFoundException("Employee not found with id: " + id);
+	}
+
+
+>>>>>>> ee03b608d7bfb872dd7f2f65e0bfaa223987d138
 }

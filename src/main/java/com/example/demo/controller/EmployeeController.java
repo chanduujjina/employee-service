@@ -47,17 +47,37 @@ public class EmployeeController {
 	
 	@GetMapping("/allEmplyees")
 	public List<EmployeeDto> getAllEmployeeDetails(){
+		if(employeeService.getAllEmployees().isEmpty()) {
+			throw new RuntimeException("No employees found");
+		}
 		return employeeService.getAllEmployees();
 	}
 	
 	@PatchMapping("/{id}")
 	public EmployeeDto patialUpdate(@PathVariable Long id, @RequestBody EmployeeDto emp) {
+		if(emp.getName() == null && emp.getRole() == null && emp.getSalary() == null) {
+			throw new RuntimeException("At least one field must be provided for partial update");
+		}
 		return employeeService.updatePartial(id, emp);
 	}
 	
 	@DeleteMapping("/{id}")
+<<<<<<< HEAD
 	public EmployeeDto delete1(@PathVariable Long id) {
+=======
+	public EmployeeDto delete(@PathVariable Long id) {
+		if(id == null) {
+			throw new RuntimeException("Id cannot be null");
+		}
+>>>>>>> ee03b608d7bfb872dd7f2f65e0bfaa223987d138
 		return employeeService.deleteEmp(id);
+	}
+	@GetMapping("/{id}")
+	public EmployeeDto getEmployeeById(@PathVariable Long id) {
+		if(id == null) {
+			throw new RuntimeException("Id cannot be null");
+		}
+		return employeeService.getEmployeeById(id);
 	}
 	
 
