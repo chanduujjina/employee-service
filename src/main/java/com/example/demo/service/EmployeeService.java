@@ -69,8 +69,8 @@ public class EmployeeService {
 		Optional<Employee> employee = employeeRepository.findById(id);
 		if(employee.isPresent()) {
 			Employee empObj = employee.get();
-			if(emp.getName() != null) {
-				empObj.setName(emp.getName());
+			if(emp.getEmp_name() != null) {
+				empObj.setName(emp.getEmp_name());
 			}if(emp.getRole() != null) {
 				empObj.setRole(emp.getRole());
 			}if(emp.getSalary() != null) {

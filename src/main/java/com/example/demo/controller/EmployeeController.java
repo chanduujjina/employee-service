@@ -56,7 +56,7 @@ public class EmployeeController {
 	}
 	
 	@DeleteMapping("/{id}")
-	public EmployeeDto delete(@PathVariable Long id) {
+	public EmployeeDto delete1(@PathVariable Long id) {
 		return employeeService.deleteEmp(id);
 	}
 	
